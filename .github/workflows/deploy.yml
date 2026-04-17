@@ -21,9 +21,10 @@ jobs:
 
       - name: Zip application
         run: |
+          echo "Directorio actual:"
           pwd
+          echo "Contenido:"
           ls -la
-          cd $GITHUB_WORKSPACE
           zip -r mi-app.zip app
 
       - name: Upload to S3
